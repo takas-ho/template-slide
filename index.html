@@ -42,6 +42,12 @@
 		<script src="reveal.js/lib/js/head.min.js"></script>
 		<script src="reveal.js/js/reveal.js"></script>
 		<script>
+            Reveal.configure({
+                keyboard: {
+                    37: 'prev', // go to the previous slide when the Left arrow key(Logicool Spotlight 'previous') is pressed
+                    39: 'next'  // go to the next slide when the Right arrow key(Logicool Spotlight 'next') is pressed
+                }
+            });
 			Reveal.initialize({
 				controls: true,
 				progress: true,
