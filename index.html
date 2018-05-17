@@ -45,7 +45,11 @@
             Reveal.configure({
                 keyboard: {
                     37: 'prev', // go to the previous slide when the Left arrow key(Logicool Spotlight 'previous') is pressed
-                    39: 'next'  // go to the next slide when the Right arrow key(Logicool Spotlight 'next') is pressed
+                    39: 'next', // go to the next slide when the Right arrow key(Logicool Spotlight 'next') is pressed
+                    // enter/leave presentation mode by pressing key 'Windows Menu/Right'
+                    93: function() {
+                        RevealSpotlight.togglePresentationMode();
+                    }
                 }
             });
 			Reveal.initialize({
@@ -76,7 +80,10 @@
 					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
 
 					// MathJax
-					{ src: 'reveal.js/plugin/math/math.js', async: true }
+					{ src: 'reveal.js/plugin/math/math.js', async: true },
+
+					// spotlight
+					{ src: 'reveal.js-plugin-spotlight/spotlight.js' }
 				]
 			});
 		</script>
